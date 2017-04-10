@@ -35,7 +35,8 @@ def index(request):
 def list(request,tid,pindex,sort):
     typeinfo=TypeInfo.objects.get(pk=int(tid))
     news=typeinfo.goodsinfo_set.order_by('-id')[0:2]
-    if sort=='1':#默认，最新
+    if sort=='1':#默认，最新1
+
         goods_list=GoodsInfo.objects.filter(gtype_id=int(tid)).order_by('-id')
     elif sort=='2':#价格
         goods_list=GoodsInfo.objects.filter(gtype_id=int(tid)).order_by('-gprice')

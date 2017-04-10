@@ -11,6 +11,7 @@ class OrderInfo(models.Model):
 
 #无法实现：真实支付，物流信息
 
+
 class OrderDetailInfo(models.Model):
     goods=models.ForeignKey('df_goods.GoodsInfo')
     order=models.ForeignKey(OrderInfo)
